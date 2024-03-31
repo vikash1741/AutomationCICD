@@ -1,74 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-23T12:40:27Z" name="Default suite" finished-at="2024-03-23T12:40:43Z" duration-ms="16473">
+  <suite started-at="2024-03-31T02:43:48Z" name="Suite" finished-at="2024-03-31T02:44:14Z" duration-ms="25601">
     <groups>
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:rahulshettyacademy.tests.SubmitOrderTest@47404bea]" name="submitOrder" class="rahulshettyacademy.tests.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
+      <group name="ErrorHandling">
+        <method signature="ErrorValidationsTest.LoginErrorValidation()[pri:0, instance:rahulshettyacademy.tests.ErrorValidationsTest@47dbb1e2]" name="LoginErrorValidation" class="rahulshettyacademy.tests.ErrorValidationsTest"/>
+      </group> <!-- ErrorHandling -->
     </groups>
-    <test started-at="2024-03-23T12:40:27Z" name="Default test" finished-at="2024-03-23T12:40:43Z" duration-ms="16473">
+    <test started-at="2024-03-31T02:43:48Z" name="Error Validations Test" finished-at="2024-03-31T02:44:04Z" duration-ms="16416">
       <class name="rahulshettyacademy.tests.ErrorValidationsTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rahulshettyacademy.tests.ErrorValidationsTest@61fe30]" started-at="2024-03-23T12:40:27Z" name="launchApplication" finished-at="2024-03-23T12:40:32Z" duration-ms="5789" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rahulshettyacademy.tests.ErrorValidationsTest@47dbb1e2]" started-at="2024-03-31T02:43:48Z" name="launchApplication" finished-at="2024-03-31T02:43:57Z" duration-ms="9317" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="ProductErrorValidation()[pri:0, instance:rahulshettyacademy.tests.ErrorValidationsTest@61fe30]" started-at="2024-03-23T12:40:32Z" name="ProductErrorValidation" finished-at="2024-03-23T12:40:43Z" duration-ms="10519" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: .mb-3 (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.131, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\USERVI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57463}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57463/devtoo..., se:cdpVersion: 122.0.6261.131, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9ba9e9c00650a2748bd89fb59a48959d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .mb-3 (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.131, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\USERVI~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57463}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57463/devtoo..., se:cdpVersion: 122.0.6261.131, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9ba9e9c00650a2748bd89fb59a48959d
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at rahulshettyacademy.AbstractComponents.AbstractComponent.waitForElementToAppear(AbstractComponent.java:37)
-at rahulshettyacademy.pageobjects.ProductCatalogue.getProductList(ProductCatalogue.java:37)
-at rahulshettyacademy.tests.ErrorValidationsTest.ProductErrorValidation(ErrorValidationsTest.java:37)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="LoginErrorValidation()[pri:0, instance:rahulshettyacademy.tests.ErrorValidationsTest@47dbb1e2]" started-at="2024-03-31T02:43:57Z" name="LoginErrorValidation" finished-at="2024-03-31T02:43:58Z" duration-ms="740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:rahulshettyacademy.tests.ErrorValidationsTest@47dbb1e2]" started-at="2024-03-31T02:43:58Z" name="tearDown" finished-at="2024-03-31T02:43:58Z" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rahulshettyacademy.tests.ErrorValidationsTest@47dbb1e2]" started-at="2024-03-31T02:43:58Z" name="launchApplication" finished-at="2024-03-31T02:44:02Z" duration-ms="3567" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="ProductErrorValidation()[pri:0, instance:rahulshettyacademy.tests.ErrorValidationsTest@47dbb1e2]" started-at="2024-03-31T02:44:02Z" name="ProductErrorValidation" finished-at="2024-03-31T02:44:04Z" duration-ms="2509" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ProductErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:rahulshettyacademy.tests.ErrorValidationsTest@61fe30]" started-at="2024-03-23T12:40:43Z" name="tearDown" finished-at="2024-03-23T12:40:43Z" duration-ms="135" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:rahulshettyacademy.tests.ErrorValidationsTest@47dbb1e2]" started-at="2024-03-31T02:44:04Z" name="tearDown" finished-at="2024-03-31T02:44:04Z" duration-ms="151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- rahulshettyacademy.tests.ErrorValidationsTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Error Validations Test -->
+    <test started-at="2024-03-31T02:43:48Z" name="Submit Order Test" finished-at="2024-03-31T02:44:14Z" duration-ms="25601">
+      <class name="rahulshettyacademy.tests.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rahulshettyacademy.tests.SubmitOrderTest@47404bea]" started-at="2024-03-31T02:43:48Z" name="launchApplication" finished-at="2024-03-31T02:43:58Z" duration-ms="9674" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:rahulshettyacademy.tests.SubmitOrderTest@47404bea]" started-at="2024-03-31T02:43:58Z" name="submitOrder" data-provider="getData" finished-at="2024-03-31T02:44:02Z" duration-ms="3635" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Iamking@000, product=ZARA COAT 3, email=anshika@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:rahulshettyacademy.tests.SubmitOrderTest@47404bea]" started-at="2024-03-31T02:44:02Z" name="tearDown" finished-at="2024-03-31T02:44:02Z" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rahulshettyacademy.tests.SubmitOrderTest@47404bea]" started-at="2024-03-31T02:44:02Z" name="launchApplication" finished-at="2024-03-31T02:44:06Z" duration-ms="3801" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:rahulshettyacademy.tests.SubmitOrderTest@47404bea]" started-at="2024-03-31T02:44:06Z" name="submitOrder" data-provider="getData" finished-at="2024-03-31T02:44:09Z" duration-ms="3955" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Iamking@000, product=ADIDAS ORIGINAL, email=shetty@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:rahulshettyacademy.tests.SubmitOrderTest@47404bea]" started-at="2024-03-31T02:44:09Z" name="tearDown" finished-at="2024-03-31T02:44:10Z" duration-ms="127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:rahulshettyacademy.tests.SubmitOrderTest@47404bea]" started-at="2024-03-31T02:44:10Z" name="launchApplication" finished-at="2024-03-31T02:44:13Z" duration-ms="3082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="OrderHistoryTest()[pri:0, instance:rahulshettyacademy.tests.SubmitOrderTest@47404bea]" started-at="2024-03-31T02:44:13Z" name="OrderHistoryTest" finished-at="2024-03-31T02:44:13Z" depends-on-methods="rahulshettyacademy.tests.SubmitOrderTest.submitOrder" duration-ms="781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderHistoryTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:rahulshettyacademy.tests.SubmitOrderTest@47404bea]" started-at="2024-03-31T02:44:13Z" name="tearDown" finished-at="2024-03-31T02:44:14Z" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- rahulshettyacademy.tests.SubmitOrderTest -->
+    </test> <!-- Submit Order Test -->
+  </suite> <!-- Suite -->
 </testng-results>
