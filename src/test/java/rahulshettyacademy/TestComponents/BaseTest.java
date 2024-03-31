@@ -49,6 +49,7 @@ public class BaseTest {
 		//prop.getProperty("browser");
 
 		if (browserName.contains("chrome")) {
+			
 			ChromeOptions options = new ChromeOptions();
 			if(browserName.contains("headless")){
 			options.addArguments("headless");
